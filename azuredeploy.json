@@ -34,6 +34,9 @@
                 "description": "Select whether to use a new or existing Virtual Network, specified by virtualNetworkName"
             }
     },
+    "virtualNetworkExistingRGName": {
+      "type": "string"
+    },
     "virtualNetworkAddressPrefix": {
       "type": "string",
       "defaultValue": "192.168.0.0/16",
@@ -398,7 +401,7 @@
                "value": "[reference('SetupVNET').outputs.vnetName.value]"
           },
           "virtualNetworkExistingRGName": {
-               "value": "[variables('rgname')]"
+               "value": "[parameters('virtualNetworkExistingRGName')]"
           },
           "subnet0Name": {
                "value": "[parameters('MgmtSubnetName')]"
