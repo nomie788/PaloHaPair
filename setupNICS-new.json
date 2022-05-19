@@ -42,8 +42,8 @@
     {
       "name": "[concat('eth0-', parameters('nicName'))]",
       "type": "Microsoft.Network/networkInterfaces",
-      "location": "[parameters('location')]",
-      "apiVersion": "2020-11-01",
+      "location": "South Central US",
+      "apiVersion": "2016-03-30",
       "properties": {
         "ipConfigurations": [
           {
