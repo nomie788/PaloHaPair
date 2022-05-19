@@ -19,7 +19,7 @@
     }
   },
   "variables": {
-       "vnetID": "/subscriptions/bd8a379d-3838-4d9b-b7be-6e33d82a33de/resourceGroups/azmanagedvnet/providers/Microsoft.Network/virtualNetworks/unmanagedvnet",
+      "vnetID": "[resourceId(parameters('virtualNetworkExistingRGName'),concat('Microsoft.Network','/','virtualNetworks'),parameters('virtualNetworkName'))]",
       "subnet1Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet1Name'))]"
   },
   "resources": [
