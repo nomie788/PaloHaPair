@@ -40,7 +40,8 @@
   },
   "resources": [
     {
-      "name": "[concat('eth0-', parameters('nicName'))]",
+//      "name": "[concat('eth0-', parameters('nicName'))]",
+      "name": "eth0",
       "type": "Microsoft.Network/networkInterfaces",
       "location": "South Central US",
       "apiVersion": "2016-03-30",
@@ -50,9 +51,9 @@
             "name": "ipconfig-mgmt",
             "properties": {
               "privateIPAllocationMethod": "Dynamic",
- /*             "publicIPAddress": {
+              "publicIPAddress": {
                  "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('mgmtpip'))]"
-              }, */
+              }, 
               "subnet": {
                 "id": "[variables('subnet0Ref')]"
               }
