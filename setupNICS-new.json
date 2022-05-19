@@ -50,9 +50,9 @@
             "name": "ipconfig-mgmt",
             "properties": {
               "privateIPAllocationMethod": "Dynamic",
-              "publicIPAddress": {
+ /*             "publicIPAddress": {
                  "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('mgmtpip'))]"
-              },
+              }, */
               "subnet": {
                 "id": "[variables('subnet0Ref')]"
               }
